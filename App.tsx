@@ -9,7 +9,6 @@ import React from 'react';
 import {
   StatusBar,
   StyleSheet,
-  useColorScheme,
   View,
   Text,
   ScrollView,
@@ -21,11 +20,9 @@ import {
 } from 'react-native-safe-area-context';
 
 function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <SafeAreaProvider>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <StatusBar barStyle="dark-content" />
       <AppContent />
     </SafeAreaProvider>
   );
