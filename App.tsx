@@ -47,11 +47,11 @@ function AppContent() {
           </View>
           <View style={styles.accountCard}>
             <View style={styles.cardHeader}>
+              <Text style={styles.cardTitle}>Current Account</Text>
               <View style={styles.bankIcon}>
                 <Text style={styles.iconText}>🏦</Text>
               </View>
             </View>
-            <Text style={styles.cardTitle}>Current Account</Text>
             <Text style={styles.cardSubtitle}>Account Account A... *1234</Text>
             <Text style={styles.cardBalance}>₦ 3,000.00</Text>
           </View>
@@ -68,21 +68,21 @@ function AppContent() {
           <View style={styles.globalViewContainer}>
             <View style={[styles.accountCard, styles.globalViewCard]}>
               <View style={styles.cardHeader}>
+                <Text style={styles.cardTitle}>HSBC Global View Personal</Text>
                 <View style={styles.globeIcon}>
                   <Text style={styles.iconText}>🌐</Text>
                 </View>
               </View>
-              <Text style={styles.cardTitle}>HSBC Global View Personal</Text>
               <Text style={styles.cardSubtitle}>*1234</Text>
               <Text style={styles.cardBalance}>₦ 3,000.00</Text>
             </View>
             <View style={[styles.accountCard, styles.globalViewCard]}>
               <View style={styles.cardHeader}>
+                <Text style={styles.cardTitle}>HSBC Global View Personal</Text>
                 <View style={styles.globeIcon}>
                   <Text style={styles.iconText}>🌐</Text>
                 </View>
               </View>
-              <Text style={styles.cardTitle}>HSBC Global View Personal</Text>
               <Text style={styles.cardSubtitle}>*1234</Text>
               <Text style={styles.cardBalance}>₦ 3,000.00</Text>
             </View>
@@ -180,7 +180,9 @@ const styles = StyleSheet.create({
     marginBottom: 0,
   },
   cardHeader: {
-    alignItems: 'flex-end',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginBottom: 8,
   },
   bankIcon: {
@@ -206,7 +208,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     color: '#000000',
-    marginBottom: 4,
+    flex: 1,
   },
   cardSubtitle: {
     fontSize: 12,
